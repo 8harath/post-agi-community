@@ -1,2 +1,1 @@
-# post-agi-community
-A repository for the Post-AGI community webpage
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
