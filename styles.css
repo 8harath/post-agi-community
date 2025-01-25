@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    color: #fff;
 }
 
 header {
@@ -27,27 +27,35 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #00ffcc;
 }
 
 /* Section Styles */
 section {
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 section h1, section h2 {
-    color: #1a1a1a;
+    color: #00ffcc;
+    animation: fadeIn 1s ease-in-out;
 }
 
 section p, section ul {
-    color: #666;
+    color: #ccc;
+}
+
+section:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
 }
 
 /* Discussion Forum Styles */
@@ -56,7 +64,8 @@ section p, section ul {
 }
 
 .thread h3 {
-    color: #007acc;
+    color: #ff00ff;
+    animation: slideInLeft 1s ease-in-out;
 }
 
 /* Contact Form Styles */
@@ -67,7 +76,7 @@ form {
 
 form label {
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #fff;
 }
 
 form input, form textarea {
@@ -75,19 +84,27 @@ form input, form textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00ffcc;
 }
 
 form button {
     padding: 0.5rem 1rem;
-    background-color: #007acc;
-    color: #fff;
+    background-color: #00ffcc;
+    color: #000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
-    background-color: #005f99;
+    background-color: #00cc99;
+    transform: scale(1.05);
 }
 
 /* Responsive Design */
@@ -114,9 +131,27 @@ form button:hover {
 
 /* Animations and Transitions */
 nav ul li a {
-    transition: text-decoration 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 form button {
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
