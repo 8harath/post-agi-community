@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #000428, #004e92);
     color: #fff;
+    text-align: center; /* Center align all text */
 }
 
 header {
@@ -72,6 +73,7 @@ section:hover {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center align form elements */
 }
 
 form label {
@@ -154,4 +156,29 @@ form button {
     to {
         transform: translateX(0);
     }
+}
+
+/* Additional Animations and Background */
+body {
+    background: linear-gradient(to bottom, #000428, #004e92, #00c6ff, #0072ff); /* Optimistic gradient background */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav ul li a:hover {
+    animation: pulse 1s infinite; /* Pulse effect on hover */
+}
+
+section h1, section h2 {
+    animation: fadeIn 1s ease-in-out, pulse 2s infinite; /* Additional pulse animation */
 }
