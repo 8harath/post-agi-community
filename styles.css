@@ -182,3 +182,49 @@ nav ul li a:hover {
 section h1, section h2 {
     animation: fadeIn 1s ease-in-out, pulse 2s infinite; /* Additional pulse animation */
 }
+
+/* Enhanced Visual Design */
+header {
+    background: linear-gradient(to right, #1a1a1a, #333333);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #00ffcc;
+}
+
+section h1, section h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form input, form textarea {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved Accessibility Features */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+nav ul li a {
+    color: #00ffcc;
+}
+
+form input, form textarea {
+    font-size: 1rem;
+}
+
+form button {
+    font-size: 1rem;
+}
