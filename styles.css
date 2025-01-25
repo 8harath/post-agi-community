@@ -228,3 +228,29 @@ form input, form textarea {
 form button {
     font-size: 1rem;
 }
+
+/* Styles for the 3D network animation and interactions */
+#3d-network {
+    width: 100%;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#3d-network canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.node {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.node:hover {
+    transform: scale(1.2);
+    color: #ff00ff;
+}
